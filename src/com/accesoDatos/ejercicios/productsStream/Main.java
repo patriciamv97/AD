@@ -4,6 +4,7 @@ import java.io.*;
 
 import static com.accesoDatos.ejercicios.productsStream.Fichero.*;
 
+
 public class Main {
 
 
@@ -16,11 +17,11 @@ public class Main {
             escribirFichero(p2,"\\Users\\Usuario\\Desktop\\produtos.txt",true);
             */
             cargarNulo(p1,p3);
-            escribirFichero(p3,"\\Users\\Usuario\\Desktop\\produtos.txt",false);
+            escribirFichero(p3,"/home/dam2a/produtos.txt",false);
             cargarNulo(p2,p3);
-            escribirFichero(p3,"\\Users\\Usuario\\Desktop\\produtos.txt",true);
+            escribirFichero(p3,"/home/dam2a/produtos.txt",true);
             System.out.println("lista de productos gardados no ficheiro produtos.txt");
-            lerFichero("\\Users\\Usuario\\Desktop\\produtos.txt");
+            lerFichero("/home/dam2a/produtos.txt");
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
