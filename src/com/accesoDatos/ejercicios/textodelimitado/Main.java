@@ -5,7 +5,8 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-            Fichero.grabarFichero("/home/dam2a/array.txt");
-            Fichero.lerFichero("/home/dam2a/array.txt");
+       // System.out.println("HOla\tBuenas");
+           Fichero.grabarFichero("\\Users\\Usuario\\Documents\\DAM\\DAM2\\AD\\FICHEROS\\texto3.txt");
+           Fichero.lerFichero();
     }
 }

@@ -2,6 +2,7 @@ package com.accesoDatos.ejercicios.textodelimitado;
 
 import java.io.*;
 
+
 public class Fichero {
 
     static File fichero;
@@ -22,36 +23,47 @@ public class Fichero {
         flujoEscritura = new BufferedWriter(escribir);
         print = new PrintWriter(flujoEscritura);
 
-        for (int i = 0; i < 3; i++) {
-            print.println(cod[i] + "\t");
-            print.println(desc[i] + "\t");
-            print.println(prezo[i] + "\t");
 
-        }
+            print.println(cod[0]+"\t"+cod[1]+"\t"+cod[2]);
+            print.println(desc[0]+"\t"+desc[1]+"\t"+desc[2]);
+            print.println(prezo[0]+"\t"+prezo[1]+"\t"+prezo[2]);
 
         print.close();
     }
 
-    public static void lerFichero(String ruta) throws IOException {
-        ler = new FileReader(fichero);
-        flujoLectura = new BufferedReader(ler);
+        public static void lerFichero() throws IOException {
 
-        if (fichero.exists()) {
-            //String lectura= flujoLectura.readLine();
+            ler = new FileReader(fichero);
 
-            do {
+            flujoLectura = new BufferedReader(ler);
 
-                String[] array = new String[9];
-                for (int i = 0; i < 9; i++) {
-                   // array[0]=lectura;
-                    array[i] = flujoLectura.readLine();
-                    System.out.println(array[i]);
+            if (fichero.exists()) {
+
+                String lecturaCodigo=flujoLectura.readLine();
+
+                String lecturaDescricion=flujoLectura.readLine();
+
+                String lecturaPrezo=flujoLectura.readLine();
+
+                String [] codigo =lecturaCodigo.split("\t");
+
+                String [] descricion = lecturaDescricion.split("\t");
+
+                String [] prezo = lecturaPrezo.split("\t");
+
+                System.out.println("Resultado lectura:\n");
+
+                for(int i=0; i<3;i++) {
+                    System.out.println("Código :        " + codigo[i] +
+                            "\nDescricion :    " + descricion[i] +
+                            "\nPrezo :         " + prezo[i]+"\n");
                 }
-            }
-            while (flujoLectura.readLine() != null);
 
+                }
+
+
+            }
         }
-    }
-}
+
 
 
