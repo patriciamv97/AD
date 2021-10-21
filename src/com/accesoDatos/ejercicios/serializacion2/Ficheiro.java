@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Ficheiro {
 
-    static final String ruta ="/home/dam2a/serial2.txt";
+    private static final String ruta ="/home/dam2a/serial2.txt";
     static FileOutputStream salida;
     static FileInputStream entrada;
     static ObjectOutputStream flujoEscritura;
